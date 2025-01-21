@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh vs Rotten</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .description {
+            padding: 30px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .description h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .description p {
+            line-height: 1.6;
+        }
+
+        .description ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .description li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .description li::before {
+            content: '•';
+            color: #4CAF50;
+            font-size: 1.2em;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .upload-container {
+            padding: 20px;
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 400px;
+        }
+
+        .upload-container input[type="file"] {
+            margin-bottom: 20px;
+        }
+
+        .upload-container .btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .upload-container .btn:hover {
+            background-color: #45a049;
+        }
+
+        .upload-container .btn:active {
+            background-color: #388e3c;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        Klasifikasi Buah - Buah Segar dan Busuk menggunakan metode CNN
+    </nav>
+    <div class="description">
+        <h2>Perbedaan dari buah segar dan buah busuk</h2>
+        <p>Buah segar merupakan salah satu kebutuhan utama di dalam kesehatan tubuh manusia karena buah memiliki kandungan gizi dan vitamin. 
+            Selain menjadi bahan pangan, buah menjadi salah satu makanan pelengkap yang dikonsumsi sehari-hari oleh banyak orang. 
+            Buah memiliki banyak manfaat untuk tubuh karena di dalamnya terdapat banyak kandungan vitamin dan serat yang dapat menyehatkan tubuh.</p>
+        <p>Berikut cara memilih buah yang segar:</p>
+        <ul>
+            <li><strong>Pilih buah yang berwarna cerah</strong>
+                <ul>
+                    <li>Untuk beberapa buah, warna cerah biasanya memiliki arti kualitas yang baik. 
+                        Sebaliknya, hindari buah yang warnanya terlalu pucat atau tua, karena itu menandakan bahwa buah belum cukup matang.</li>
+                </ul>
+            </li>
+            <li><strong>Cium aromanya</strong>
+                <ul>
+                    <li>Buah yang matang dan berkualitas baik biasanya memiliki aroma yang segar dan cenderung manis, sedangkan buah yang belum matang cenderung beraroma sepat atau bahkan tidak memiliki aroma sama sekali.</li>
+                </ul>
+            </li>
+            <li><strong>Cek kulit buah</strong>
+                <ul>
+                    <li>Untuk mengetahui apakah buah yang kamu beli sudah matang atau belum, kamu juga mengecek dari kulitnya. Buah yang masih segar biasanya memiliki kulit yang bagus atau tidak rusak, sedangkan buah yang tidak segar biasanya ditandai dengan kulit yang mulai keriput, lembek, bahkan rusak.</li>
+                </ul>
+            </li>
+            <li><strong>Perhatikan teksturnya</strong>
+                <ul>
+                    <li>Melihat dan memperhatikan tekstur buah adalah suatu hal yang penting saat ingin membeli atau memilih buah. Kita juga bisa mencoba menekan bagian badan buah, jika buah sudah matang biasanya memiliki tekstur yang empuk tetapi tidak lembek. Selain itu, sebaiknya hindari buah yang tekstur dagingnya masih keras karena biasanya belum bisa langsung dimakan atau masih mentah.</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Manfaat buah-buahan bagi tubuh:</h3>
+        <ul>
+            <li>Sumber Vitamin, Berbagai jenis vitamin ada di buah.</li>
+            <li>Sumber Air dan Gizi, Buah merupakan salah satu sumber air untuk tubuh dan kebutuhan gizi yang dapat meningkatkan metabolisme tubuh.</li>
+            <li>Sumber antioksidan, Buah merupakan salah satu sumber antioksidan alami.</li>
+            <li>Mencegah penyakit tertentu, Buah-buahan merupakan salah satu cara untuk menghindarkan kita agar tidak terserang penyakit berbahaya dan berbagai penyakit lainnya.</li>
+            <li>Obat luar tubuh, Buah-buahan juga dapat digunakan untuk obat luar seperti jerawat, bisul dan sebagainya.</li>
+        </ul>
+    </div>
+    <div class="upload-container">
+        <form id="upload-form" method="POST" enctype="multipart/form-data" action="/predict">
+            <input type="file" id="file" name="file" accept="image/*" class="form-control">
+            <button class="btn" type="submit">Scan</button>
+        </form>
+    </div>
+</body>
+</html>
