@@ -19,7 +19,7 @@ Dokumen proyek dapat diakses melalui link berikut:
 
 ### 2. Trello
 Papan Trello untuk manajemen tugas proyek:
-[Trello Board](https://trello.com/invite/b/6787337563f6e6b1b23f2c72/ATTId8a7af0a7b1deabf9e28371a83dc0b9097AD7E6C/rpl)
+[Trello Board]https://trello.com/b/d0ljvICx/rpl-tugas
 
 ### 3. Draw.io Diagram
 Diagram perancangan sistem dapat diakses melalui:
