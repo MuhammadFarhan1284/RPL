@@ -23,4 +23,4 @@ Papan Trello untuk manajemen tugas proyek:
 
 ### 3. Draw.io Diagram
 Diagram perancangan sistem dapat diakses melalui:
-[Draw.io File](https://drive.google.com/file/d/1jn_L6OVna7SLw7cbv7TVs3pE2Bk9VCwq/view?usp=sharing](https://drive.google.com/file/d/1-pEvnUVXbGht8vrCtnzsiMEr0Z7um6eD/view?usp=sharing).
+[Draw.io File]. https://drive.google.com/file/d/1-pEvnUVXbGht8vrCtnzsiMEr0Z7um6eD/view
